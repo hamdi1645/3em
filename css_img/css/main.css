@@ -1,0 +1,217 @@
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #0a0f1a;
+      color: #fff;
+      
+    }
+
+    /* ══════════════ NAVBAR ══════════════ */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      height: 64px;
+      border-bottom: 1px solid #1e2a3a;
+      background: #0d1421;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #cdd6e0;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: #17a2b8; }
+
+    .nav-links a.active {
+      color: #17a2b8;
+      border-bottom: 2px solid #17a2b8;
+      padding-bottom: 2px;
+    }
+
+    .nav-socials {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .nav-socials a {
+      color: #8b949e;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-socials a:hover { color: #fff; }
+
+    /* ══════════════ HERO ══════════════ */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 60px;
+      min-height: calc(100vh - 64px);
+      gap: 40px;
+    }
+
+    /* ── Gauche ── */
+    .hero-left {
+      flex: 1;
+      max-width: 560px;
+    }
+
+    .hero-left h1 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .hero-left h1 span {
+      color: #17a2b8;
+    }
+
+    .hero-typed {
+      font-size: 1.2rem;
+      color: #cdd6e0;
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+
+    .hero-typed span {
+      color: #17a2b8;
+      border-right: 2px solid #17a2b8;
+      padding-right: 3px;
+      animation: blink 0.8s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      color: #8b949e;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      max-width: 480px;
+    }
+
+    /* ── Boutons ── */
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #17a2b8;
+      color: #fff;
+      padding: 13px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid #17a2b8;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: #138ea0;
+      box-shadow: 0 6px 20px rgba(23,162,184,0.35);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      padding: 13px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: 2px solid #fff;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: #0a0f1a;
+      transform: translateY(-2px);
+    }
+
+    /* ── Droite : image + badges ── */
+    .hero-right {
+      flex: 0 0 460px;
+      position: relative;
+      height: 480px;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+      filter: brightness(0.9);
+    }
+
+    /* Badges flottants */
+    .badge {
+      position: absolute;
+      background: rgba(15, 25, 40, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid #1e2a3a;
+      border-radius: 10px;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .badge svg { width: 20px; height: 20px; color: #17a2b8; }
+
+    .badge-design {
+      top: 20px;
+      right: -20px;
+    }
+
+    .badge-code {
+      bottom: 90px;
+      left: -30px;
+    }
+
+    .badge-ideas {
+      bottom: 20px;
+      right: -20px;
+    }
+
+    /* ══════════════ ANIMATION ══════════════ */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-left h1    { animation: slideIn 1.75s ease forwards; }
+    .hero-typed      { animation: slideIn 1.75s ease 0.2s forwards; opacity: 0; }
+    .hero-desc       { animation: slideIn 1.75s ease 0.35s forwards; opacity: 0; }
+    .hero-btns       { animation: slideIn 1.75s ease 0.5s forwards; opacity: 0; }
+    .hero-right      { animation: slideIn 1.75s ease 0.3s forwards; opacity: 0; }

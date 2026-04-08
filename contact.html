@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.8">
+        <title>contact</title>
+        <link rel="stylesheet" href="css_img/css/contact.css">
+        <link rel="stylesheet" href="styleo.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body  >
+       
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid px-4" style="background: linear-gradient(to right, rgb(11, 12, 12), rgb(54, 209, 236));">
+    
+    <a class="navbar-brand fw-bold fs-5 text-white" href="#" style="letter-spacing: 2px; text-transform: uppercase;">
+      ✦ Welcome
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      
+      <!-- Header -->
+      <div class="offcanvas-header border-bottom" style="
+        background-color: black;
+        border-left: 4px solid #3327d1;
+        padding: 22px 24px;
+      ">
+        <h5 class="offcanvas-title mb-0" id="offcanvasNavbarLabel" style="
+          color: #f8fdfd;
+          font-family: 'Courier New', monospace;
+          text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+          letter-spacing: 3px;
+          font-size: 0.85rem;
+          text-transform: uppercase;
+        ">⬡ Option Panel</h5>
+        <button type="button" class="btn-close btn-close-white opacity-75" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="offcanvas-body" style="
+        background-color: black;
+        border-left: 4px solid #3327d1;
+        font-family: 'Courier New', monospace;
+        padding: 28px 24px;
+      ">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-1">
+          
+          <li class="nav-item">
+            <a class="nav-link active px-3 py-2 rounded" href="main.html" style="
+              color: #00ffcc;
+              text-shadow: 0 0 6px #00ffcc;
+              font-size: 0.9rem;
+              letter-spacing: 1.5px;
+              border-left: 2px solid #00ffcc;
+            ">▸ Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded" href="about.html" style="
+              color: #e9e7e7;
+              text-shadow: 0 0 5px #00ffcc;
+              font-size: 0.9rem;
+              letter-spacing: 1.5px;
+              transition: color 0.2s;
+            ">▸ About</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded" href="contact.html" style="
+              color: #e9e7e7;
+              text-shadow: 0 0 5px #00ffcc;
+              font-size: 0.9rem;
+              letter-spacing: 1.5px;
+            ">▸ Contact</a>
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link px-3 py-2 rounded" href="portfolio.html" style="
+              color: #e9e7e7;
+              text-shadow: 0 0 5px #00ffcc;
+              font-size: 0.9rem;
+              letter-spacing: 1.5px;
+            ">▸ Portfoliot</a>
+          </li>
+        </ul>
+
+       
+          
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+        <section id="contact" class="contact section" data-builder="section">
+
+  <div class="container section-title aos-init aos-animate" data-aos="fade-up" data-builder="section-title">
+  <span class="subtitle">Contact</span>
+  <h2>Contact</h2>
+  <p>Tous chemins méne à Rome</p>
+</div><slot type="section-title"></slot>
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4">
+        <div class="info-item">
+          <div class="icon-wrapper">
+            <i class="bi bi-geo-alt"></i>
+          </div>
+          <div>
+            <h3>Address</h3>
+            <p>Djiboutie,djiboutie,cite HODAN</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon-wrapper">
+            <i class="bi bi-telephone"></i>
+          </div>
+          <div>
+            <h3>Call Me</h3>
+            <p>253 77 62 73 02</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon-wrapper">
+            <i class="bi bi-envelope"></i>
+          </div>
+          <div>
+            <h3>Email Me</h3>
+            <p>hamdiahmed1645@gmail.com</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-8">
+        <form action="forms/contact.php" method="post" class="php-email-form">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    </body>
